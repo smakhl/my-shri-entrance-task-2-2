@@ -1,0 +1,244 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+    color: #333333;
+}
+
+#logo {
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+nav > ul {
+    margin: 7px;
+    margin-left: 52px;
+    margin-top: 8px;
+}
+
+nav > ul > li {
+    list-style: none;
+    opacity: 0.6;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline;
+    line-height: 20px;
+    margin-right: 24px;
+}
+
+.menuLink {
+    color: #333333;
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.menuLink.active {
+    opacity: 1;
+}
+
+header {
+    display: flex;
+    padding: 30px;
+    border-bottom: 1px solid #F0F0F0;
+    margin: 0px 0px 28px;
+}
+
+#status-box {
+    background: url("../guide/assets/bg@1x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 630px;
+    height: 331px;
+    overflow: hidden;
+    position: relative;
+}
+
+#status-container {
+    margin: 0 auto;
+    padding-left: 25px; 
+    padding-top: 25px; 
+}
+
+#status-sumary {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.temp-label {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #858585;
+}
+
+.temp {
+    font-size: 36px;
+    color: #333333;
+    letter-spacing: 0;
+    font-weight: bold;
+    margin-top: 4px;
+    margin-right: 18px;
+}
+
+.temp > span {
+    background:url("../guide/assets/cloud-drizzle.png"); 
+    width:26px; 
+    height:26px;
+    display: block;
+    margin-left: 5px;
+    margin-top: 5px;
+    float: right;
+}
+
+#temperature {
+    display: flex;
+}
+
+#hi {
+    font-size: 27px;
+    font-weight: bold;
+    display: inline;
+}
+
+.section-heading {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.schedule {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    overflow: scroll;
+    height: 100%;
+    /* width: 220px; */
+    box-sizing: content-box;
+}
+
+.card {
+    background: #F7F7F7;
+    border-radius: 20px;
+    width: 200px;
+    position: relative;
+}
+
+.card.scenario-card {
+    height: 100px;
+}
+
+.card.schedule-card {
+    height: 120px;
+    margin-bottom: 15px;
+}
+
+.card.device-card {
+    height: 120px;
+    margin-right: 16px;
+    flex: none;
+}
+
+.card-text {
+    position: absolute;
+    bottom: 14px;
+    left: 15px;
+    margin-right: 15px; 
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.card-info {
+    font-size: 12px;
+    margin-top: 4.5px;
+    color: #858585;
+}
+
+.card-icon {
+    width:24px; 
+    height:24px;
+    display: block;
+    margin-top: 14px;
+    margin-left: 14px;
+    float: left;
+}
+
+.card:hover {
+    background: #FFFFFF;
+    box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);
+}
+
+.card-icon.scheduled {
+    background:url("../guide/assets/icon_scheduled@1x.png") left top; 
+}
+
+.card-icon.sun {
+    background:url("../guide/assets/icon_sun@1x.png") left top; 
+}
+
+.card-icon.sun.active  {
+    background:url("../guide/assets/icon_sun_2@1x.png") left top; 
+}
+
+.card-icon.temperature {
+    background:url("../guide/assets/icon_temperature@1x.png") left top; 
+}
+
+.card-icon.temperature.active{
+    background:url("../guide/assets/icon_temperature_2@1x.png") left top; 
+}
+
+@media (min-width: 700px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        width: 1266px;
+        grid-gap: 26px;
+        margin: 0px 40px 0px;
+    }
+    #scenarios {
+        width: 630px;
+        height: 331px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;
+        grid-auto-rows: auto;
+        align-content: flex-start;
+    }
+    footer {
+        margin: 22px 40px 0px
+    }
+    footer > ul {
+        display: flex;
+    }
+    footer > ul > li {
+        list-style: none;
+        font-size: 12px;
+        color: #858585;
+        letter-spacing: 0.01px;
+        text-align: left;
+        margin-right: 20px;
+    }
+    #devices {
+        display: flex;
+        overflow: auto;
+        justify-content: flex-start;
+    }
+    
+    #main-section {
+        grid-column: 1 / 2;
+    }
+
+    #devices-section {
+        grid-column: 1 / 3;
+    }
+
+    #scearios-section {
+        grid-column: 2 / 3;
+    }
+}
